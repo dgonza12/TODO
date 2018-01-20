@@ -2,7 +2,7 @@
   <div class="task-list">
     <h1>Todo:</h1>
     <button (click)="createNewTask()">+</button>
-    <button (click)="show = !show">{{show ? 'hide' : 'delete'}}</button>
+    <button *ngIf="tasks.length > 0" (click)="show = !show">{{show ? 'hide' : 'delete'}}</button>
 
     <div class="task" *ngFor="let task of tasks; trackBy: customTrackBy(); let i=index">
       <button *ngIf="show" (click)="deleteTask(tasks.indexOf(task)) " class="delete-button">X</button>
