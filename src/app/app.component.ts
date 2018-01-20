@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  tasks = [{name: 'wash the dishes', done: 1}, {name: 'laundry', done: null}, {name: 'clean room', done: null}];
+  tasks = [];
   deletedtasks = [];
   checkTask(index) {
     if (this.tasks[index].done === 1) {
